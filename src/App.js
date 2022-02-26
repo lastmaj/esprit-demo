@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import Product from './components/Product'
 
 function App() {
+  const name = 'Issa'
+
+  const data = [
+    { name: 'apple airpods', price: 500, qty: 5 },
+    { name: 't-shirt rouge', price: 5, qty: 47 },
+    { name: 'watch', price: 50, qty: 10 },
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="App">
+        <p>Welcome to react, {name}!</p>
+      </div>
+      <Product name={data[0].name} price={data[0].price} qty={data[0].qty} />
+      <Product name={data[1].name} price={data[1].price} qty={data[1].qty} />
+      <Product name={data[2].name} price={data[2].price} qty={data[2].qty} />
+    </>
+  )
 }
 
-export default App;
+export default App
